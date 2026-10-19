@@ -1,0 +1,128 @@
+{
+  "project_name": "Embedded Systems Activities",
+  "project_summary": "Hands-on firmware exercises covering ESP32 and Arduino programming, sensor data, peripheral control, and device-to-device communication.",
+  "source_directory": "esp32",
+  "source_extensions": [
+    ".ino"
+  ],
+  "activity_titles": {
+    "activity_01_digital_analog_io.ino": "01 · Digital and analog I/O",
+    "activity_02_serial_communication.ino": "02 · Serial control and DHT11 monitoring",
+    "activity_03_bt_serial_communication.ino": "03 · Bluetooth serial control and monitoring",
+    "activity_03_master.ino": "03 · Bluetooth master",
+    "activity_03_slave.ino": "03 · Bluetooth slave",
+    "activity_03a_bt_led_control.ino": "03A · Bluetooth LED control",
+    "activity_03b_bt_dht_monitoring.ino": "03B · Bluetooth DHT11 monitoring",
+    "activity_04_i2c_communication.ino": "04 · I2C sensor and OLED display",
+    "test.ino": "Servo control with a potentiometer"
+  },
+  "technology_signals": [
+    {
+      "name": "ESP32",
+      "category": "Microcontrollers",
+      "pattern": "BluetoothSerial|CONFIG_BT_ENABLED"
+    },
+    {
+      "name": "DHT11 temperature and humidity sensor",
+      "category": "Sensors",
+      "pattern": "DHTTYPE\\s+DHT11"
+    },
+    {
+      "name": "Analog input / potentiometer",
+      "category": "Sensors",
+      "pattern": "analogRead\\s*\\("
+    },
+    {
+      "name": "GPIO digital I/O",
+      "category": "Hardware interfaces",
+      "pattern": "pinMode\\s*\\(|digital(?:Read|Write)\\s*\\("
+    },
+    {
+      "name": "PWM output",
+      "category": "Hardware interfaces",
+      "pattern": "analogWrite\\s*\\(|ledcWrite\\s*\\("
+    },
+    {
+      "name": "UART / serial",
+      "category": "Hardware interfaces",
+      "pattern": "\\bSerial\\.(?:begin|available|read|write)\\s*\\("
+    },
+    {
+      "name": "Bluetooth Classic serial",
+      "category": "Hardware interfaces",
+      "pattern": "BluetoothSerial|SerialBT"
+    },
+    {
+      "name": "I2C",
+      "category": "Hardware interfaces",
+      "pattern": "#include\\s*[<\"]Wire\\.h"
+    },
+    {
+      "name": "SSD1306 OLED",
+      "category": "Peripherals",
+      "pattern": "Adafruit_SSD1306|SSD1306"
+    },
+    {
+      "name": "Servo motor",
+      "category": "Peripherals",
+      "pattern": "#include\\s*[<\"]Servo\\.h|\\.attach\\s*\\("
+    }
+  ],
+  "learning_path": [
+    {
+      "stage": "01 · Read inputs",
+      "focus": "Start with digital pins and ADC readings; record pin assignments, expected voltage ranges, and sample rates."
+    },
+    {
+      "stage": "02 · Drive outputs",
+      "focus": "Control LEDs and servos safely, distinguish digital output from PWM, and verify the board-specific pin capabilities."
+    },
+    {
+      "stage": "03 · Connect sensors",
+      "focus": "Read DHT11 measurements, handle failed samples, and document sensor timing and library dependencies."
+    },
+    {
+      "stage": "04 · Communicate",
+      "focus": "Compare UART, Bluetooth Classic SPP, and I2C; define message formats and test disconnected or invalid-data cases."
+    },
+    {
+      "stage": "05 · Integrate firmware",
+      "focus": "Combine sensor, display, and actuator paths; replace avoidable blocking delays with scheduled, non-blocking updates."
+    }
+  ],
+  "engineering_checklist": [
+    "Confirm the exact board, core version, required libraries, and wiring before flashing.",
+    "Check sensor voltage limits, common ground, pull-ups, and actuator power requirements.",
+    "Keep a pin map with ADC/PWM capabilities and note pins reserved by boot, flash, or peripheral functions.",
+    "Validate sensor readings and communication state before using them to drive outputs.",
+    "Record serial baud rates, Bluetooth device names, I2C addresses, and reproducible test steps."
+  ],
+  "references": [
+    {
+      "title": "ESP32 Arduino core documentation",
+      "url": "https://docs.espressif.com/projects/arduino-esp32/en/latest/"
+    },
+    {
+      "title": "Arduino language reference",
+      "url": "https://docs.arduino.cc/language-reference/"
+    },
+    {
+      "title": "ESP32 BluetoothSerial API",
+      "url": "https://github.com/espressif/arduino-esp32/tree/master/libraries/BluetoothSerial"
+    },
+    {
+      "title": "Adafruit SSD1306 library",
+      "url": "https://github.com/adafruit/Adafruit_SSD1306"
+    },
+    {
+      "title": "Adafruit DHT sensor library",
+      "url": "https://github.com/adafruit/DHT-sensor-library"
+    }
+  ],
+  "build_manifests": [
+    "platformio.ini",
+    "CMakeLists.txt",
+    "idf_component.yml",
+    "arduino-cli.yaml"
+  ]
+}

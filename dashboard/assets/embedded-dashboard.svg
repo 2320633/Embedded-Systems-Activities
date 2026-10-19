@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="title desc">
+  <title id="title">Embedded Systems Engineering Dashboard</title>
+  <desc id="desc">A circuit-board inspired banner with an ESP32, sensor, and firmware dashboard motif.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a2b"/>
+      <stop offset="1" stop-color="#123c58"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#36d6c5"/>
+      <stop offset="1" stop-color="#75e6a2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" rx="22" fill="url(#background)"/>
+  <g fill="none" stroke="#2b7890" stroke-width="2" opacity=".68">
+    <path d="M760 0v48h70v45h84m-84 0v64h-58v45h-46"/>
+    <path d="M932 0v38h74v60h100m-103 0v73h-77v45h-74"/>
+    <path d="M1200 47h-37v52h-34m71 94h-57v-42h-59"/>
+    <path d="M1051 0v25h-57m-120 235v-26h-47"/>
+  </g>
+  <g fill="#36d6c5">
+    <circle cx="760" cy="48" r="4"/><circle cx="914" cy="93" r="4"/>
+    <circle cx="932" cy="38" r="4"/><circle cx="1006" cy="98" r="4"/>
+    <circle cx="1076" cy="98" r="4"/><circle cx="1051" cy="25" r="4"/>
+    <circle cx="872" cy="234" r="4"/><circle cx="1099" cy="172" r="4"/>
+  </g>
+  <g transform="translate(875 66)">
+    <rect width="210" height="128" rx="13" fill="#0a2638" stroke="#36d6c5" stroke-width="2"/>
+    <rect x="18" y="18" width="174" height="92" rx="7" fill="#102f43"/>
+    <path d="M33 79h25l13-23 18 34 18-46 18 35h51" fill="none" stroke="url(#accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+    <circle cx="176" cy="37" r="5" fill="#75e6a2"/>
+    <g stroke="#36d6c5" stroke-width="3">
+      <path d="M-8 24h8m-8 20h8m-8 20h8m-8 20h8m-8 20h8M210 24h8m-8 20h8m-8 20h8m-8 20h8m-8 20h8"/>
+    </g>
+  </g>
+  <g transform="translate(1123 78)" fill="none" stroke="#75e6a2" stroke-width="3">
+    <path d="M0 41c15-15 15-37 0-52m14 62c22-22 22-54 0-76"/>
+    <circle cx="-8" cy="45" r="4" fill="#75e6a2"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="64" y="94" fill="#75e6a2" font-size="16" font-weight="700" letter-spacing="4">FIRMWARE · SENSORS · HARDWARE</text>
+    <text x="61" y="151" fill="#f2fbff" font-size="38" font-weight="700">Embedded Systems</text>
+    <text x="64" y="194" fill="#f2fbff" font-size="38" font-weight="700">Engineering Dashboard</text>
+    <path d="M64 219h370" stroke="url(#accent)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
