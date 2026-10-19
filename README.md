@@ -4,7 +4,7 @@
 
 > Hands-on firmware exercises covering ESP32 and Arduino programming, sensor data, peripheral control, and device-to-device communication.
 >
-> **Generated:** 2026-10-19 13:41 UTC · **Refresh:** daily by GitHub Actions
+> **Generated:** 2026-10-19 13:50 UTC · **Refresh:** daily by GitHub Actions
 
 | Firmware examples | Source lines | Sensor/input types | Interface types |
 |:---:|:---:|:---:|:---:|
